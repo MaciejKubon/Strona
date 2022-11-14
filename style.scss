@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+$backgroundcyan-color:rgb(222, 243, 250);
+$niceblue-color:#0091FF;
+$darkblue-color: #143DE1;
+$black:#130f40;
+$white:#fff;
+$light-color:#666;
+$light-bg:#eee;
+$border:.2rem solid $black;
+$box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap:1.5rem;
+}
+
+@mixin form-btn{
+  width:100%;
+  text-align: center;
+
+  &:hover{
+    background: $darkblue-color;
+  }
+}
+
+@mixin white-btn {
+  color:$white;
+  border-color: $black;
+
+  &:hover{
+    color:$niceblue-color;
+    border-color: $white;
+  }
+
+  &::before{
+    background:$white;
+  }
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+
+  &::-webkit-scrollbar{
+    width:1rem;
+  }
+
+  &::-webkit-scrollbar-track{
+    background:transparent;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background:$niceblue-color;
+    border-radius: 5rem;
+  }
+}
+
+section{
+  padding:5rem 9%;
+}
+
+.heading{
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color:$black;
+
+  span{
+    color:$niceblue-color;
+  }
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  padding:.8rem 2.8rem;
+  border-radius: 5rem;
+  border:$border;
+  cursor: pointer;
+  background: none;
+  color:$black;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width:100%;
+    background: $darkblue-color;
+    z-index: -1;
+    transition: .2s linear;
+    clip-path: circle(0% at 0% 5%);
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+  }
+
+  &:hover::before{
+    clip-path: circle(100%);
+  }
+
+  &:hover{
+    color:$white;
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+.header{
+  background: $backgroundcyan-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+  box-shadow: $box-shadow;
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 1000;
+  transform: translateY(-10rem);
+
+  &.active{    
+    transform: translateY(0rem);
+  }
+
+  .logo{
+    font-size: 1.7rem;
+    color:$black;
+    font-weight: bolder;
+
+    i{
+      color:$niceblue-color;
+    }
+  }
+
+  .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color:$light-color;
+
+    &:hover{
+      color:$niceblue-color;
+    }
+  }
+
+  .icons a,
+  .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color:$black;
+    cursor: pointer;
+
+    &:hover{
+      color:$niceblue-color;
+    }
+  }
+}
+
+.choice{
+  position: sticky;
+    background: $white;
+padding-top: 1rem;
+padding-bottom: 2rem;
+padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: $box-shadow;
+  top:6rem; left:0; right:0; 
+  z-index: 1000;
+
+  a{
+    margin:0 10rem;
+    font-size: 1.7rem;
+    color:$light-color;
+
+    &:hover{
+      color:$niceblue-color;
+    }
+  }
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: url(../images/nowelogo1.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  
+    .content{
+      width:50rem;
+  
+      h3{
+        font-size: 6rem;
+        color:$white;
+        padding-bottom: 1rem;
+  
+        span{
+          color:$niceblue-color;
+        }
+      }
+  
+      .btn{
+        @include white-btn();
+      }
+    }
+  
+    .wave{
+      position: absolute;
+      bottom: 0; left:0;
+      width: 100%;
+      height: 12rem;
+    }
+  }
+
+
+
+#menu-btn{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+// media queries 
+
+@media (max-width:991px) {
+  
+  html{
+    font-size: 55%;
+  }
+
+  .header{
+    padding:2rem;
+  }
+
+  section{
+    padding:5rem 2rem;
+  }  
+
+  .home{
+    justify-content: center;
+    background-position: right;
+
+    .content{
+      text-align: center;
+      padding-bottom: 5rem;
+
+      h3{
+        font-size: 4.5rem;
+      }
+    }
+  }
+  
+}
+
+@media (max-width:768px){
+
+  #menu-btn{
+    display: inline-block;
+  }
+
+  .header{
+
+    .navbar{
+      position: absolute;
+      height: 72px;
+      top:99%; left:0; right:0;
+      background: $white;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      a{
+        display: block;
+        margin:2rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+}
+
+.footer{
+  background: $backgroundcyan-color;
+  position: relative;
+  background-size: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  transform: translateY(20rem);
+
+  &.active{    
+    display: block;
+    animation: fadeIn .5s linear;
+    transform: translateY(0rem);
+  }
+
+
+
+  .share{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    column-gap: 10rem;
+
+    a{
+      @include white-btn();
+      color:$black;
+
+      i{
+        padding-right: .5rem;
+      }
+    }
+  }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.doctor_cards {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  margin-top: 7rem;
+}
+
+.doctor_card {
+  background-color: lightblue;
+  width: 45%;
+  display: flex;
+  padding: 20px 2%;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  margin-bottom: 10px;
+}
+
+.doctor_photo {
+  width: 35%;
+  padding-right: 5%;
+  min-width: 150px;
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+.doctor_data {
+  width: 65%;
+  padding: 5px 1% 5px 5%;
+  border-left: 1px solid gray;
+}
+
+.doctor_name {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 1.2em;
+  color: #130f40;
+}
+
+.doctor_specialty {
+  margin-top: 10px;
+  text-align: left;
+  color: #130f40;
+}
+
+.doctor_rating {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  color: #130f40;
+}
+
+.stars {
+  display: flex;
+  width: 30%;
+}
+
+.star {
+  width: 20%;
+  margin: 0 2px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.number_of_ratings {
+  padding: 0 10px;
+}
+
+.calender {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.next_5_days {
+  margin: 20px 0px;
+  display: flex;
+  width: 100%;
+}
+
+.days {
+  width: 20%;
+  text-align: center;
+}
+
+.day {
+  padding-bottom: 10px;
+  color: #130f40;
+}
+
+.day_name {
+  font-size: 1rem;
+  color: #130f40;
+}
+
+.day_data {
+  font-size: 1.2rem;
+  color: #130f40;
+}
+
+.hours {
+  padding: 0px 0px;
+  font-size: 1.5rem;
+  color: #666;
+
+  button {
+    width: 80%;
+    padding: 5px 0px;
+    margin-bottom: 7px;
+    border: 0px;
+  }
+}
+
+.term_booked {
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: line-through;
+  color: #666;
+}
+
+.term_free {
+  background-color: #def3fa;
+  border-radius: 5px;
+  color: $black;
+
+  &:hover {
+    cursor: pointer;
+    color: #0091FF;
+  }
+}
+
+.empty_term {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(120, 120, 120);
+}
+
+.more_term {
+  display: flex;
+  justify-content: center;
+
+  button {
+    height: 40px;
+    width: 40%;
+    border-radius: 15px;
+    border: 0px;
+    background-color: lightcyan;
+
+    &:hover {
+      cursor: pointer;
+      color: #0091FF;
+    }
+  }
+}
+
+
+
+
+/// media
+
+@media (max-width:450px){
+  
+  html{
+    font-size: 50%;
+  }
+  
+  .header .login-form{
+    width:90%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
