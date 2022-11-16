@@ -215,6 +215,10 @@
       {
           flex-wrap: wrap;
       }
+      #Pediatra_card, #Rodzinny_card
+      {
+        flex-wrap: wrap;
+      }
       .doctor_card
       {
           width: 100%;  
@@ -236,6 +240,10 @@
           width: 100%;  
           display:block;
       }  
+      #Pediatra_card, #Rodzinny_card
+      {
+        flex-wrap: wrap;
+      }
       .doctor_photo
       {
           padding-left: 25%;
