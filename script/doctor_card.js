@@ -105,7 +105,7 @@ function zmien(id, data)
   }
 }
 
-$.getJSON('data/data_doctor.json', function(data) {
+$.getJSON('https://maciejkubon.github.io/Strona/data/data_doctor.json', function(data) {
   for (var i in data.Pediatra)
   {
     let dane = data.Pediatra[i];
