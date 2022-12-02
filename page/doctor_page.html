@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POLmed</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style_doctor_card.css" />
+
+
+    <!-- custom js file link  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script/script.js" defer></script>
+    <script src="script/spec_choice.js" defer></script>
+    <script src="script/doctor_card.js" defer></script> 
+
+
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <style>
+      .scrollable-place {
+        height: 1000px;
+      }
+
+      .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header section start-->
+
+    <header class="header">
+      <a href="#" class="logo"> <i class="#"></i> Logo </a>
+
+
+
+      <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+      </div>
+    </header>
+
+    <!--header section end-->
+
+    <!--choice section start-->
+    <section class="choice">
+      <nav class="choice_bar">
+        <button id="Pediatra">Pediatra</button>
+        <button id="Rodzinny">Rodzinny</button>
+      </nav>
+    </section>
+
+    <!--choice section ends-->
+    
+    <div class="doctor_cards">
+      <div id="Pediatra_card">
+        <!-- Początek Panelu wyboru lekarza-->
+        
+        <!-- Koniec Karty lekarza -->
+      </div>
+      <div id="Rodzinny_card">
+        
+        <!-- Koniec Karty lekarza -->
+      </div>
+    </div>
+    <!-- Początek Panelu wyboru lekarza-->
+
+    <!--footer section-->
+
+    <section class="footer">
+      <div class="share">
+        <a href="#" class="btn"> <i class="fab fa-facebook"></i> facebook </a>
+        <a href="#" class="btn"> <i class="fab fa-twitter"></i> twitter </a>
+        <a href="#" class="btn"> <i class="fab fa-instagram"></i> instagram </a>
+        <a href="#" class="btn"> <i class="fab fa-linkedin"></i> linkedin </a>
+        <a href="#" class="btn"> <i class="fab fa-pinterest"></i> pinterest </a>
+      </div>
+    </section>
+
+    <!--footer section end-->
+  </body>
+</html>
