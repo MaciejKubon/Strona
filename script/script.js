@@ -1,4 +1,4 @@
-let navbar = document.querySelector('.header .navbar');
+let navbar = document.querySelector('.header');
 window.onscroll = () =>{
 
     navbar.classList.remove('active');

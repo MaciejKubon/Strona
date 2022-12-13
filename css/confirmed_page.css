@@ -1,0 +1,259 @@
+.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  padding: 20px 5%;
+  margin-top: 7rem;
+}
+.doctor_appointment {
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  padding: 2px 5%;
+  width: 65%;
+}
+.appointment_top {
+  max-height: 10rem;
+  border-bottom: 1px solid gray;
+  padding-top: 10px;
+}
+.appointment_top h2 {
+  padding: 20px;
+  font-weight: 400;
+  font-size: 2em;
+  color: #130f40;
+  text-align: center;
+}
+.between_middle {
+  display: flex;
+  margin: 20px auto;
+}
+.between_middle h3 {
+  text-align: left;
+  font-size: 1.5em;
+  color: #130f40;
+}
+.middle {
+  display: flex;
+  justify-content: space-between;
+
+}
+.left_middle {
+  display: flex;
+  width: 20%;
+}
+.doctor_photo {
+  width: 30%;
+  min-width: 150px;
+  display: flex;
+}
+.doctor_photo img {
+  width: 100%;
+  border-radius: 10px;
+  margin: auto;
+}
+.right_middle {
+  display: flex;
+  padding: 2px 0% 2px 5%;
+  width: 75%;
+  flex-wrap: wrap;
+}
+.visit_data {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+  justify-content: space-between;
+  color: #130f40;
+  width: 100%;
+}
+.visit_data h3{
+    width: 100%;
+    text-align: center;
+}
+.doctor_name
+{
+  width: 50%;
+}
+
+.appointment_bottom {
+  justify-content: center;
+}
+.cancel_button {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+}
+.cancel_button button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 60%;
+  border-radius: 15px;
+  border: 0px;
+  background-color: lightcyan;
+
+  align-content: center;
+}
+
+.cancel_button :hover {
+  cursor: pointer;
+  color: #0091ff;
+}
+
+
+
+
+/* OKIENKO */
+#window_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10000;
+}
+
+#window_overlay.opened {
+  opacity: 1;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
+  visibility: visible;
+}
+
+.window_content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%) scale(0, 0);
+  -webkit-transform: translate(-50%, -50%) scale(0, 0);
+  transform: translate(-50%, -50%) scale(0, 0);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+  visibility: hidden;
+  z-index: 10001;
+}
+
+.window_content.opened {
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms;
+  -ms-transform: translate(-50%, -50%) scale(1, 1);
+  -webkit-transform: translate(-50%, -50%) scale(1, 1);
+  transform: translate(-50%, -50%) scale(1, 1);
+  visibility: visible;
+  padding: 40px 5%;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.window_content .window_close {
+  margin-left: -50px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ec3f22;
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.window_content .window_close:hover {
+  text-decoration: none;
+  background-color: #ec6922;
+}
+
+
+@media (max-width: 1024px) {
+  .doctor_appointment {
+    width: 80%;
+    }
+  .middle
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .between_middle h3
+  {
+    text-align: center;
+    width: 100%;
+  }
+  .left_middle
+  {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .right_middle
+  {
+    width: 100%;
+  }
+  .doctor_photo {
+    width: 40%;
+    max-width: 300px;
+  }
+  .visit_data h4
+  {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .cancel_button button
+  {
+    width: 90%;
+  }
+
+
+
+
+  .window_content {
+    margin-top: 5%;
+    width: 80%;
+    height: 50vh;
+  }
+  .window_content h2
+  {
+    height: 80%;
+  }
+
+  
+}
+
+@media (max-width: 600px) {
+  .window_content {
+    margin-top: 5%;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .window_content h2
+  {
+    height: 80%;
+    font-size: 3em;
+    margin-bottom: 40px;
+  }
+  .window_content .window_close {
+    padding: 10px auto;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ec3f22;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+}

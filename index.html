@@ -13,7 +13,7 @@
     />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main_style.css" />
     <link rel="stylesheet" href="css/style_doctor_card.css" />
 
 
@@ -23,48 +23,26 @@
     <script src="script/spec_choice.js" defer></script>
     <script src="script/doctor_card.js" defer></script> 
 
-
-    <link rel="icon" href="/images/favicon.ico" />
-
-    <style>
-      .scrollable-place {
-        height: 1000px;
-      }
-
-      .stop-scrolling {
-        height: 100%;
-        overflow: hidden;
-      }
-    </style>
   </head>
   <body>
     <!--header section start-->
 
-    <header class="header">
-      <a href="#" class="logo"> <i class="#"></i> Logo </a>
-
-      <nav class="navbar">
-        <a href="../index.html">home</a>
-      </nav>
-
-      <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
-        <div class="fas fa-user" id="login-btn"></div>
-      </div>
-    </header>
+    <div class="header">
+      <a href="#" class="logo"> <i href="#"><img  src="/img/logo.png" alt="Logo">POLmed</i> </a>
+    </div>
 
     <!--header section end-->
 
     <!--choice section start-->
-    <section class="choice">
-      <nav class="choice_bar">
+    <div class="choice">
+      <div class="choice_bar">
         <button id="Pediatra">Pediatra</button>
         <button id="Rodzinny">Rodzinny</button>
-      </nav>
-    </section>
+      </div>
+    </div>
 
     <!--choice section ends-->
-    
+    <div class="content">
     <div class="doctor_cards">
       <div id="Pediatra_card">
         <!-- Początek Panelu wyboru lekarza-->
@@ -76,19 +54,19 @@
         <!-- Koniec Karty lekarza -->
       </div>
     </div>
-    <!-- Początek Panelu wyboru lekarza-->
+  </div>
 
     <!--footer section-->
 
-    <section class="footer">
+    <div class="footer">
       <div class="share">
-        <a href="#" class="btn"> <i class="fab fa-facebook"></i> facebook </a>
-        <a href="#" class="btn"> <i class="fab fa-twitter"></i> twitter </a>
-        <a href="#" class="btn"> <i class="fab fa-instagram"></i> instagram </a>
-        <a href="#" class="btn"> <i class="fab fa-linkedin"></i> linkedin </a>
-        <a href="#" class="btn"> <i class="fab fa-pinterest"></i> pinterest </a>
+        <a href="https://www.facebook.com/CentrumMedycznePolmed/" class="btn"> <i class="fab fa-facebook"></i> facebook </a>
+        <a href="https://www.youtube.com/c/CentrumMedycznePOLMED" class="btn"> <i class="fab fa-youtube"></i> youtube </a>
+        <a href="https://www.instagram.com/polmedcentrummedyczne/" class="btn"> <i class="fab fa-instagram"></i> instagram </a>
+        <a href="https://www.linkedin.com/company/polmed-s.a./?originalSubdomain=pl" class="btn"> <i class="fab fa-linkedin"></i> linkedin </a>
+        <a href="https://www.nfz.gov.pl/" class="btn"> <img src="/img/nfz_logo_C_kolor.png"> </a>
       </div>
-    </section>
+    </div>
 
     <!--footer section end-->
   </body>

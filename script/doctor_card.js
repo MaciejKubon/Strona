@@ -52,12 +52,12 @@ function creat_doctor_rating(rating, number_of_ratings)
   let tekst = ' <div class="doctor_rating"><div class="stars">'
   let i=0;
   while (i<rating) {
-    tekst = tekst + '<div class="star"><img src="star.png" alt="gwiazdka" /></div>';
+    tekst = tekst + '<div class="star"><img src="/img/star.png" alt="gwiazdka" /></div>';
     i++;
   }
   while(i<5)
   {
-    tekst = tekst + '<div class="star"><img src="star_white.png" alt="gwiazdka" /></div>';
+    tekst = tekst + '<div class="star"><img src="/img/star_white.png" alt="gwiazdka" /></div>';
     i++;
   }
   tekst = tekst + '</div>  <div class="number_of_ratings">'+number_of_ratings+' oceny</div></div>';
@@ -81,7 +81,7 @@ function creat_5_day_calender(id)
 function creat_doctor_card(id, type, name, img, rating, number_of_ratings)
 {
 
-  let tekst = '<div class="doctor_card"><div class="doctor_photo"><img src="'+img+'" alt="zjecie" /></div><div class="doctor_data"><div class="doctor_name"><h2>'+name+'</h2>'+
+  let tekst = '<div class="doctor_card"><div class="doctor_photo"><img src="/img/'+img+'" alt="zjecie" /></div><div class="doctor_data"><div class="doctor_name"><h2>'+name+'</h2>'+
   '</div>  <div class="doctor_specialty"><h3>' + type + '</h3></div>'+ creat_doctor_rating(rating, number_of_ratings)+ creat_5_day_calender(id)+'</div></div>';
   $("#"+type+"_card").append(tekst);
 }
@@ -105,7 +105,7 @@ function zmien(id, data)
   }
 }
 
-$.getJSON('https://maciejkubon.github.io/Strona/data/data_doctor.json', function(data) {
+$.getJSON('../data/data_doctor.json', function(data) {
   for (var i in data.Pediatra)
   {
     let dane = data.Pediatra[i];
@@ -118,4 +118,10 @@ $.getJSON('https://maciejkubon.github.io/Strona/data/data_doctor.json', function
     creat_doctor_card(dane.id,dane.type,dane.name,dane.img,dane.rating,dane.number_of_ratings);
     zmien(dane.id, dane.date);
   }  
+    url = "/page/doctor_page.html";
+    $(".calender button").click(function(){
+      $(location).attr("href", url);
+    })
 });
+
+

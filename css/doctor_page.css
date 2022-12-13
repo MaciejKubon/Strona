@@ -1,0 +1,326 @@
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 10%;
+  margin-top: 7rem;
+}
+.left_side {
+  width: 50%;
+}
+.right_side {
+  width: 45%;
+}
+.doctor_card {
+  background-color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.doctor_photo {
+  width: 30%;
+  padding-right: 3%;
+  padding-left: 3%;
+  min-width: 150px;
+  display: flex;
+}
+.doctor_photo img {
+  width: 100%;
+  border-radius: 10px;
+  margin: auto;
+}
+.doctor_data {
+  width: 65%;
+  padding: 2rem 5%;
+  border-left: 1px solid gray;
+}
+.doctor_name {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 1.2em;
+  color: #130f40;
+}
+
+.doctor_specialty {
+  margin-top: 10px;
+  text-align: left;
+  color: #130f40;
+}
+
+.doctor_rating {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #130f40;
+}
+
+.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+.star {
+  width: 20%;
+  margin: 0 2px;
+}
+
+.star img {
+  width: 100%;
+  height: 100%;
+}
+
+.number_of_ratings {
+  padding: 0 10px;
+}
+.doctor_message {
+  display: flex;
+  justify-content: center;
+}
+
+.doctor_message button {
+  font-size: 1rem;
+  height: 40px;
+  width: 60%;
+  border-radius: 15px;
+  border: 0px;
+  background-color: lightcyan;
+  margin-top: 3rem;
+}
+.doctor_message :hover {
+  cursor: pointer;
+  color: #0091ff;
+}
+
+.doctor_info {
+  background-color: lightblue;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  padding: 2rem 5%;
+}
+.doctor_address {
+  width: 90%;
+  text-align: left;
+  font-size: 0.8em;
+  color: #130f40;
+}
+
+.doctor_number {
+  width: 90%;
+  text-align: left;
+  font-size: 0.8em;
+  color: #130f40;
+}
+.doctor_description {
+  background-color: rgb(255, 255, 255, 0.6);
+  width: 100%;
+  text-align: left;
+  font-size: 0.8em;
+  color: #130f40;
+
+  min-height: 125px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+/* -----------------RIGHT SIDE-----------------*/
+.doctor_appointment {
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  width: 100%;
+  padding: 10px 5%;
+}
+.appointment_top {
+  display: flex;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  padding: 20px 0px 20px 0px;
+}
+
+.visit_reason {
+  text-align: left;
+  font-size: 1.5em;
+  color: #130f40;
+  width: 50%;
+}
+#purpose_of_visit {
+  width: 100%;
+}
+.price {
+  text-align: right;
+
+  color: #130f40;
+  width: 50%;
+  font-weight: 100;
+}
+.price h5 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.appointment_bottom h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.calendar_app {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left_arrow,
+.right_arrow {
+  width: 8%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left_arrow button,
+.right_arrow button {
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 100%;
+  background-color: lightcyan;
+}
+.left_arrow button:hover,
+.right_arrow button:hover {
+  cursor: pointer;
+  color: #0091ff;
+}
+/* -----------------KALENDARZ-------------- */
+.calendar {
+  width: 75%;
+}
+.next_5_days {
+  margin: 10px 0px;
+  display: flex;
+  width: 100%;
+}
+.days {
+  width: 20%;
+  text-align: center;
+}
+.day {
+  padding-bottom: 10px;
+}
+.day_name {
+  font-size: 1.2em;
+}
+.day_data {
+  font-size: 0.8em;
+}
+.houers {
+  padding: 0px 0px;
+}
+.houers button {
+  width: 80%;
+  padding: 5px 0px;
+  margin-bottom: 7px;
+  border: 0px;
+}
+.term_booked {
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: line-through;
+  color: rgb(120, 120, 120);
+}
+.term_free {
+  background-color: lightcyan;
+  border-radius: 5px;
+  color: lightseagreen;
+}
+.term_free:hover {
+  cursor: pointer;
+}
+.empty_term {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(120, 120, 120);
+}
+.more_term {
+  display: flex;
+  justify-content: center;
+}
+.more_term button {
+  height: 30px;
+  width: 40%;
+  border-radius: 15px;
+  border: 0px;
+  background-color: lightcyan;
+}
+@media only screen and (max-width: 1024px) {
+.content{
+    flex-wrap: wrap;
+  }
+  .left_side {
+    width: 100%;
+    min-width: 350px;
+  }
+  .right_side {
+    width: 100%;
+    min-width: 350px;
+    margin-top: 25px;
+  }
+  .doctor_card {
+    width: 100%;
+  }
+  .doctor_photo {
+    width: 40%;
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-wrap: wrap;
+  }
+  .left_side {
+    width: 100%;
+    min-width: 300px;
+  }
+  .right_side {
+    width: 100%;
+    min-width: 300px;
+  }
+  .doctor_card {
+    width: 100%;
+    display: block;
+    align-items: center;
+  }
+  .doctor_photo {
+    padding-left: 25%;
+  }
+  .doctor_photo img {
+    width: 150px;
+  }
+  .doctor_data {
+    width: 100%;
+    border-left: 0px solid gray;
+  }
+  .calender {
+    width: 90%;
+  }
+  .more_term button
+  {
+    width: 80%;
+  }
+}

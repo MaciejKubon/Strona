@@ -1,3 +1,47 @@
+.choice {
+  position: -webkit-sticky;
+  position: sticky;
+  background: #fff;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding: 2rem 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  top: 6rem;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.choice_bar {
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-justify: center;
+  justify-content: center;
+}
+.choice button {
+  margin: 5px 10%;
+  font-size: 1.5rem;
+  color: #666;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+}
+
+.choice button:hover {
+  color: #0091ff;
+  cursor: pointer;
+}
 .doctor_cards {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -201,15 +245,6 @@
     color: #0091FF;
   }
   
-  @media (max-width: 450px) {
-    html {
-      font-size: 50%;
-    }
-    .header .login-form {
-      width: 90%;
-    }
-  }
-  
   @media only screen and (max-width: 1024px)
   {
       .doctor_cards
@@ -232,6 +267,9 @@
   }
   @media only screen and (max-width: 600px)
   {
+      .choice_bar {
+    flex-wrap: wrap;
+  }
       .doctor_cards
       {
           flex-wrap: wrap;
@@ -262,9 +300,5 @@
       {
           width: 90%;
       }
-      .choice button
-      {
-        width: 100%;
-        margin: 5px 0;
-      }
+
   }
