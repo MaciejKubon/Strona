@@ -105,7 +105,7 @@ function zmien(id, data)
   }
 }
 
-$.getJSON('../data/data_doctor.json', function(data) {
+$.getJSON('data/data_doctor.json', function(data) {
   for (var i in data.Pediatra)
   {
     let dane = data.Pediatra[i];
@@ -118,7 +118,7 @@ $.getJSON('../data/data_doctor.json', function(data) {
     creat_doctor_card(dane.id,dane.type,dane.name,dane.img,dane.rating,dane.number_of_ratings);
     zmien(dane.id, dane.date);
   }  
-    url = "/page/doctor_page.html";
+    url = "page/doctor_page.html";
     $(".calender button").click(function(){
       $(location).attr("href", url);
     })

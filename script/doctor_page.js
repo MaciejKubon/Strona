@@ -50,7 +50,7 @@ let id = "zaq1";
     $(".more").slideToggle(500);
   });
 
-  url = "/page/confirmed_page.html";
+  url = "confirmed_page.html";
   $(".houers button").click(function(){
     $(location).attr("href", url);
   })
