@@ -1,3 +1,6 @@
+import data from '../data/data_doctor.json' assert { type: 'json' };
+import calender from '../data/data_calender.json' assert {type: 'json'};
+
 let today_data = new Date();
 const doba = 86400000;
 let day_name = [];
@@ -66,11 +69,27 @@ function creat_doctor_rating(rating, number_of_ratings)
 
 function creat_5_day_calender(id)
 {
-  tekst = '<div class="calender" id="'+id+'"><div class="next_5_days" >';
+  let id_calender = calender[id];
+  let day_calender;
+  let godzina;
+  let tekst = '<div class="calender" id="'+id+'"><div class="next_5_days" >';
   for(let i=0; i<5; i++)
   {
+    day_calender = id_calender[day_data[i]]
     tekst = tekst + '<div class="days"><div class="day"><p class="day_name">'+day_name[i]+'</p><p class="day_data">'+day_data[i]+'</p></div>';
-    tekst = tekst + '<div class="hours" id="'+id+'_'+day_name[i]+'"'+'></div></div>';
+    tekst = tekst + '<div class="hours">';
+    
+    for(let i=0; i<4; i++)
+    { 
+      godzina = day_calender[i];
+      if(godzina == '-')
+        tekst = tekst +'<button class="empty_term">-</button>';
+      else if(godzina.length >5)
+        tekst = tekst +' <button class="term_booked">'+godzina.slice(0, -1) +'</button>';
+      else
+        tekst = tekst +'<button class="term_free">'+godzina+'</button>';
+    }
+    tekst = tekst + '</div></div>';
   }
     tekst = tekst + '</div><div class="more_term"><button>Więcej terminów</button></div></div>';
   return tekst;
@@ -81,47 +100,102 @@ function creat_5_day_calender(id)
 function creat_doctor_card(id, type, name, img, rating, number_of_ratings)
 {
 
-  let tekst = '<div class="doctor_card"><div class="doctor_photo"><img src="/img/'+img+'" alt="zjecie" /></div><div class="doctor_data"><div class="doctor_name"><h2>'+name+'</h2>'+
+  let tekst = '<div class="doctor_card" ><div class="doctor_photo"><img src="/img/'+img+'" alt="zjecie" /></div><div class="doctor_data"><div class="doctor_name"><h2>'+name+'</h2>'+
   '</div>  <div class="doctor_specialty"><h3>' + type + '</h3></div>'+ creat_doctor_rating(rating, number_of_ratings)+ creat_5_day_calender(id)+'</div></div>';
   $("#"+type+"_card").append(tekst);
 }
-function zmien(id, data)
-{
-  for(let j =0;j<5; j++)
-  {
-    let godziny = data[day_data[j]]
-    let miejsce = '#'+id+'_'+day_name[j];
-    tekst = '';
-    for(let i=0; i<4; i++)
-    { 
-      if(godziny[i] == '-')
-        tekst = tekst +'<button class="empty_term">-</button>';
-      else if(godziny[i].length >5)
-        tekst = tekst +' <button class="term_booked">'+godziny[i].slice(0, -1) +'</button>';
-      else
-        tekst = tekst +'<button class="term_free">'+godziny[i]+'</button>';
-    }
-  $(miejsce).append(tekst);
-  }
-}
 
-$.getJSON('data/data_doctor.json', function(data) {
-  for (var i in data.Pediatra)
-  {
-    let dane = data.Pediatra[i];
-    creat_doctor_card(dane.id,dane.type,dane.name,dane.img,dane.rating,dane.number_of_ratings);
-    zmien(dane.id,dane.date);
-  }  
-  for (var i in data.Rodzinny)
-  {
-    let dane = data.Rodzinny[i];
-    creat_doctor_card(dane.id,dane.type,dane.name,dane.img,dane.rating,dane.number_of_ratings);
-    zmien(dane.id, dane.date);
-  }  
-    url = "page/doctor_page.html";
-    $(".calender button").click(function(){
-      $(location).attr("href", url);
-    })
+let id_tab = data.id_all_doctors;
+for(let i in id_tab)
+{
+  let dane = data.id[id_tab[i]];
+  creat_doctor_card(id_tab[i],dane.type,dane.name,dane.img,dane.rating,dane.number_of_ratings);
+  
+}
+let url = "page/doctor_page.html";
+$(".calender button").click(function(){ 
+  url = url + "?id="+ $(this).parents(".calender").attr('id');
+  $(location).attr("href", url);
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function zmien(id, data)
+// {
+//   for(let j =0;j<5; j++)
+//   {
+//     let godziny = data[day_data[j]]
+//     let miejsce = '#'+id+'_'+day_name[j];
+//     let tekst = '';
+//     for(let i=0; i<4; i++)
+//     { 
+//       if(godziny[i] == '-')
+//         tekst = tekst +'<button class="empty_term">-</button>';
+//       else if(godziny[i].length >5)
+//         tekst = tekst +' <button class="term_booked">'+godziny[i].slice(0, -1) +'</button>';
+//       else
+//         tekst = tekst +'<button class="term_free">'+godziny[i]+'</button>';
+//     }
+//   $(miejsce).append(tekst);
+//   }
+// }
+
+// $.getJSON('data/data_doctor.json', function(data) {
+//   for (var i in data.Pediatra)
+//   {
+//     let dane = data.Pediatra[i];
+//     creat_doctor_card(dane.id,dane.type,dane.name,dane.img,dane.rating,dane.number_of_ratings);
+//     zmien(dane.id,dane.date);
+//   }  
+//   for (var i in data.Rodzinny)
+//   {
+//     let dane = data.Rodzinny[i];
+//     creat_doctor_card(dane.id,dane.type,dane.name,dane.img,dane.rating,dane.number_of_ratings);
+//     zmien(dane.id, dane.date);
+//   }  
+//     url = "page/doctor_page.html";
+//     $(".calender button").click(function(){
+//       $(location).attr("href", url);
+//     })
+// });

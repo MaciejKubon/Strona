@@ -1,22 +1,44 @@
+import data from '../data/data_doctor.json' assert { type: 'json' };
 
 
-
-
-
+function rating (mark, number_of_ratings)
+{
+  let tekst = '<div class="stars">'
+  let i=0;
+  while (i<mark) {
+    tekst = tekst + '<div class="star"><img src="/img/star.png" alt="gwiazdka" /></div>';
+    i++;
+  }
+  while(i<5)
+  {
+    tekst = tekst + '<div class="star"><img src="/img/star_white.png" alt="gwiazdka" /></div>';
+    i++;
+  }
+  tekst = tekst + '</div> <div class="number_of_ratings">'+number_of_ratings+' oceny</div>';
+  return tekst;
+}
 
 
 $(document).ready(function () {
-  // let adres = location.href;
-  // let id = adres.split("?")[1];
-  // id = id.split("=")[1];
-let id = "zaq1";
-  // $.getJSON('../data/'+id+'.json', function(data) {
-  //   for (var i in data)
-  //   {
-      
-  //   }
-   
-  // });
+  let adres = location.href;
+  let id = adres.split("?")[1];
+  id = id.split("=")[1];
+  let dane = data.id[id];
+
+  $(".doctor_photo img").attr("src","../img/"+dane['img']);
+  $(".doctor_name h2").append(dane['name']);
+  $(".doctor_specialty h3").append(dane['type'])
+  $(".doctor_rating").append(rating(dane['rating'], dane['number_of_ratings']));
+  $(".doctor_address h2").append(dane['addres']);
+  $(".doctor_number h2").append(dane['phone_number']);
+  $(".doctor_description p").append(dane['doctor_description']);
+  for(let i in dane["type_of_visit"])
+  {
+    let type_of_visit = dane["type_of_visit"][i];
+    let tekst = '<option value="'+type_of_visit.replace(' ', '_')+'">'+type_of_visit+'</option>'
+    $("#purpose_of_visit").append(tekst);
+  }
+ 
 
 
 
@@ -24,22 +46,29 @@ let id = "zaq1";
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   // ZMIANA CENY
   $("#purpose_of_visit").change(function(){
     let rodzaj_wizyty = $("select#purpose_of_visit option:checked").val();
     let cena = "-"
-    if(rodzaj_wizyty == "konsultacje")
-      cena = "100 zł";
-    else if(rodzaj_wizyty == "wizyta_kontrolna")
-      cena = "80 zł";
-    else if(rodzaj_wizyty == "-")
+    if(rodzaj_wizyty == "-")
       cena = "-";
-    else if(rodzaj_wizyty == "choroba")
-      cena = "130 zł";
-    else if(rodzaj_wizyty == "szczepienie")
-      cena = "150 zł";
     else 
-      cena = "40 zł";
+      cena = dane['price_of_visit'][rodzaj_wizyty.replace('_',' ')]+" zł";
     $(".price h5:last()").text(cena);
   });
 
@@ -50,7 +79,7 @@ let id = "zaq1";
     $(".more").slideToggle(500);
   });
 
-  url = "confirmed_page.html";
+  let url = "confirmed_page.html";
   $(".houers button").click(function(){
     $(location).attr("href", url);
   })

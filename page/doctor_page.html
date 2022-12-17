@@ -19,7 +19,7 @@
     <!-- custom js file link  -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="../script/script.js" defer></script>
-    <script src="../script/doctor_page.js"></script>
+    <script src="../script/doctor_page.js" type="module"></script>
   </head>
   <body>
     <!--header section start-->
@@ -34,23 +34,15 @@
         <div class="doctor_card">
           <!-- Początek karty poszczególnego lekarza-->
 
-          <div class="doctor_photo"><img src="../img/zdj.jpeg" alt="" /></div>
+          <div class="doctor_photo"><img src="" alt="" /></div>
           <div class="doctor_data">
             <div class="doctor_name">
-              <h2>Imię i Nazwisko</h2>
+              <h2></h2>
             </div>
             <div class="doctor_specialty">
-              <h3>Pediatra</h3>
+              <h3></h3>
             </div>
             <div class="doctor_rating">
-              <div class="stars">
-                <div class="star"><img src="../img/star.png" alt="gwiazdka" /></div>
-                <div class="star"><img src="../img/star.png" alt="gwiazdka" /></div>
-                <div class="star"><img src="../img/star.png" alt="gwiazdka" /></div>
-                <div class="star"><img src="../img/star.png" alt="gwiazdka" /></div>
-                <div class="star"><img src="../img/star.png" alt="gwiazdka" /></div>
-              </div>
-              <div class="number_of_ratings">53 oceny</div>
             </div>
             <div class="doctor_message"><button>Wyślij wiadmość</button></div>
           </div>
@@ -58,13 +50,13 @@
         <div class="doctor_info">
           <!--poczatek info o lekarzu-->
           <div class="doctor_address">
-            <h2>Adres Lekarza</h2>
+            <h2>Adres: </h2>
           </div>
           <div class="doctor_number">
-            <h2>numer Lekarza</h2>
+            <h2>Numer telefonu: </h2>
           </div>
           <div class="doctor_description">
-            <p>Opis lekarza...</p>
+            <p></p>
           </div>
         </div>
       </div>
@@ -75,11 +67,7 @@
               <label>Wybierz cel wizyty: </label>
               <select id="purpose_of_visit" name="purpose_of_visit">
                 <option value="-">-</option>
-                <option value="wizyta_kontrolna">wizyta kontrolna</option>
-                <option value="konsultacja">konsultacja</option>
-                <option value="choroba">choroba</option>
-                <option value="wypisanie_recepty">wypisanie recepty</option>
-                <option value="szczepienie">szczepienie</option>
+                
               </select>
             </div>
             <div class="List_of_reasons"></div>
