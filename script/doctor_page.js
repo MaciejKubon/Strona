@@ -6,12 +6,12 @@ function rating (mark, number_of_ratings)
   let tekst = '<div class="stars">'
   let i=0;
   while (i<mark) {
-    tekst = tekst + '<div class="star"><img src="img/star.png" alt="gwiazdka" /></div>';
+    tekst = tekst + '<div class="star"><img src="../img/star.png" alt="gwiazdka" /></div>';
     i++;
   }
   while(i<5)
   {
-    tekst = tekst + '<div class="star"><img src="img/star_white.png" alt="gwiazdka" /></div>';
+    tekst = tekst + '<div class="star"><img src="../img/star_white.png" alt="gwiazdka" /></div>';
     i++;
   }
   tekst = tekst + '</div> <div class="number_of_ratings">'+number_of_ratings+' oceny</div>';
