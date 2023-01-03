@@ -1,5 +1,25 @@
-import data from '../data/data_doctor.json' assert { type: 'json' };
-import calender from '../data/data_calender.json' assert {type: 'json'};
+// import data from '../data/data_doctor.json' assert { type: 'json' };
+// import calender from '../data/data_calender.json' assert {type: 'json'};
+
+const data = await fetch("../data/data_doctor.json").then((data) => data.json());
+const calender = await fetch("../data/data_calender.json").then((data) => data.json());
+// const responseData = await fetch('../data/data_doctor.json');
+// const data = await JSON.parse(responseData);
+// const responseCalender = await fetch('../data/data_doctor.json');
+// const calender = await JSON.parse(responseCalender);
+// console.log(calender);
+// console.log(calender['zaq1']);
+
+function NumberMonth(NumMonth)
+{
+  let tekst =''
+  if(NumMonth<10)
+    tekst = '0'+NumMonth;
+  else
+    tekst = NumMonth;
+  
+  return tekst;
+}
 
 let today_data = new Date();
 const doba = 86400000;
@@ -12,22 +32,17 @@ for (let i=0; i<5; i++)
 {
     let dzien = new Date(time);
     
-    if(dzien.getDay() !=0 && dzien.getDay()!=6)
-    {
-        day_data[i] = dzien.getDate() + '.' + (Number(dzien.getMonth())+1);
-        time = time + doba;
-    }
-    else if(dzien.getDay() == 0)
-    {
-        dzien = new Date(time + doba);
-        day_data[i] = dzien.getDate() + '.' + (Number(dzien.getMonth())+1);
-        time = time + 2*doba;
-    }
-    else
-    {
-        dzien = new Date(time + 2*doba);
-        day_data[i] = dzien.getDate() + '.' + (Number(dzien.getMonth())+1);
-        time = time + 3*doba;
+    if (dzien.getDay() != 0 && dzien.getDay() != 6) {
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      time = time + doba;
+    } else if (dzien.getDay() == 0) {
+      dzien = new Date(time + doba);
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      time = time + 2 * doba;
+    } else {
+      dzien = new Date(time + 2 * doba);
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      time = time + 3 * doba;
     }
     if(i==0)
     {

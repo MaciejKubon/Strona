@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>POLmed</title>
-
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
@@ -24,12 +24,14 @@
   <body>
     <!--header section start-->
 
-    <div class="header">
-      <a href="../index.html" class="logo"> <i href="#"><img  src="../img/logo.png" alt="Logo">POLmed</i> </a>
-    </div>
+    <header class="header">
+      <a href="../index.html" class="logo">
+        <i href="#"><img src="../img/logo.png" alt="Logo" />POLmed</i>
+      </a>
+    </header>
 
     <!--header section end-->
-    <div class="content">
+    <main class="content">
       <div class="left_side">
         <div class="doctor_card">
           <!-- Początek karty poszczególnego lekarza-->
@@ -42,18 +44,19 @@
             <div class="doctor_specialty">
               <h3></h3>
             </div>
-            <div class="doctor_rating">
-            </div>
+            <div class="doctor_rating"></div>
             <div class="doctor_message"><button>Wyślij wiadmość</button></div>
           </div>
         </div>
         <div class="doctor_info">
           <!--poczatek info o lekarzu-->
           <div class="doctor_address">
-            <h2>Adres: </h2>
+            <h2>Adres:</h2>
+            <h3></h2>
           </div>
           <div class="doctor_number">
-            <h2>Numer telefonu: </h2>
+            <h2>Numer telefonu:</h2>
+            <h3></h2>
           </div>
           <div class="doctor_description">
             <p></p>
@@ -67,7 +70,6 @@
               <label>Wybierz cel wizyty: </label>
               <select id="purpose_of_visit" name="purpose_of_visit">
                 <option value="-">-</option>
-                
               </select>
             </div>
             <div class="List_of_reasons"></div>
@@ -81,172 +83,43 @@
             <div class="calendar_app">
               <div class="left_arrow"><button>&lt</button></div>
               <div class="calendar">
-                <!-- Początek kalendarza -->
-                <div class="next_5_days">
-                  <div class="days">
-                    <div class="day">
-                      <p class="day_name">Dziś</p>
-                      <p class="day_data">04.11</p>
-                    </div>
-                    <div class="houers">
-                      <button class="term_booked">09:00</button>
-                      <button class="term_free">09:20</button>
-                      <button class="term_free">09:40</button>
-                      <button class="term_free">10:00</button>
-                      <div class="more" hidden>
-                      <button class="term_free">10:00</button>
-                      <button class="term_free">10:00</button>
-                      <button class="term_booked">09:00</button>
-                      <button class="term_free">09:20</button>
-                      <button class="term_booked">09:40</button>
-                      <button class="term_free">10:00</button>
-                      <button class="term_free">10:00</button>
-                      <button class="term_free">10:00</button>
-                      <button class="term_booked">09:00</button>
-                      <button class="term_free">09:20</button>
-                      <button class="term_booked">09:40</button>
-                      <button class="term_free">10:00</button>
-                      <button class="term_free">10:00</button>
-                      <button class="term_free">10:00</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="days">
-                    <div class="day">
-                      <p class="day_name">Jutro</p>
-                      <p class="day_data">05.11</p>
-                    </div>
-                    <div class="houers">
-                      <button class="term_booked">09:00</button>
-                      <button class="term_free">09:20</button>
-                      <button class="term_free">09:40</button>
-                      <button class="term_free">10:00</button>
-                      <div class="more" hidden>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="days">
-                    <div class="day">
-                      <p class="day_name">Ndz,</p>
-                      <p class="day_data">06.11</p>
-                    </div>
-                    <div class="houers">
-                      <button class="term_booked">09:00</button>
-                      <button class="term_free">09:20</button>
-                      <button class="term_free">09:40</button>
-                      <button class="term_free">10:00</button>
-                      <div class="more" hidden>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="days">
-                    <div class="day">
-                      <p class="day_name">Pon,</p>
-                      <p class="day_data">07.11</p>
-                    </div>
-                    <div class="houers">
-                      <button class="term_booked">09:00</button>
-                      <button class="term_free">09:20</button>
-                      <button class="term_free">09:40</button>
-                      <button class="term_free">10:00</button>
-                      <div class="more" hidden>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="days">
-                    <div class="day">
-                      <p class="day_name">Wt,</p>
-                      <p class="day_data">08.11</p>
-                    </div>
-                    <div class="houers">
-                      <button class="term_booked">09:00</button>
-                      <button class="term_free">09:20</button>
-                      <button class="term_free">09:40</button>
-                      <button class="term_free">10:00</button>
-                      <div class="more" hidden>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_booked">09:00</button>
-                        <button class="term_free">09:20</button>
-                        <button class="term_booked">09:40</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        <button class="term_free">10:00</button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="more_term"><button>Więcej terminów</button></div>
-                <!-- Koniec kalendarza -->
+                
               </div>
               <div class="right_arrow"><button>&gt</button></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Początek Panelu wyboru lekarza-->
+    </main>
+  
 
     <!--footer section-->
 
-    <div class="footer">
+    <footer class="footer">
       <div class="share">
-        <a href="https://www.facebook.com/CentrumMedycznePolmed/" class="btn"> <i class="fab fa-facebook"></i> facebook </a>
-        <a href="https://www.youtube.com/c/CentrumMedycznePOLMED" class="btn"> <i class="fab fa-youtube"></i> youtube </a>
-        <a href="https://www.instagram.com/polmedcentrummedyczne/" class="btn"> <i class="fab fa-instagram"></i> instagram </a>
-        <a href="https://www.linkedin.com/company/polmed-s.a./?originalSubdomain=pl" class="btn"> <i class="fab fa-linkedin"></i> linkedin </a>
-        <a href="https://www.nfz.gov.pl/" class="btn"> <img src="../img/nfz_logo_C_kolor.png"> </a>
+        <a href="https://www.facebook.com/CentrumMedycznePolmed/" class="btn">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.youtube.com/c/CentrumMedycznePOLMED" class="btn">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.instagram.com/polmedcentrummedyczne/" class="btn">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/company/polmed-s.a./?originalSubdomain=pl"
+          class="btn"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.nfz.gov.pl/" class="btn">
+          <img src="../img/nfz_logo_C_kolor.png" />
+        </a>
       </div>
-    </div>
+    </footer>
 
     <!--footer section end-->
   </body>
 </html>
+
+

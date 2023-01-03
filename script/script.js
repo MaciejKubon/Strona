@@ -8,6 +8,7 @@ window.onscroll = () =>{
     }else{
         document.querySelector('.header').classList.remove('active');
     }
+
 }
 
 window.onload = () =>{

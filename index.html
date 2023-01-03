@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>POLmed</title>
-
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
@@ -16,20 +16,21 @@
     <link rel="stylesheet" href="css/main_style.css" />
     <link rel="stylesheet" href="css/style_doctor_card.css" />
 
-
     <!-- custom js file link  -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="script/script.js" defer></script>
+    <script src="script/script.js" ></script>
     <script src="script/spec_choice.js" defer></script>
-    <script src="script/doctor_card.js" type="module"></script> 
-
+    <script src="script/doctor_card.js" type="module" asserttype="webassembly"></script>
+    
   </head>
   <body>
     <!--header section start-->
 
-    <div class="header">
-      <a href="#" class="logo"> <i href="#"><img  src="img/logo.png" alt="Logo">POLmed</i> </a>
-    </div>
+    <header class="header">
+      <a href="#" class="logo">
+        <i href="#"><img src="img/logo.png" alt="Logo" />POLmed</i>
+      </a>
+    </header>
 
     <!--header section end-->
 
@@ -42,31 +43,43 @@
     </div>
 
     <!--choice section ends-->
-    <div class="content">
-    <div class="doctor_cards">
-      <div id="Pediatra_card">
-        <!-- Początek Panelu wyboru lekarza-->
-        
-        <!-- Koniec Karty lekarza -->
-      </div>
-      <div id="Rodzinny_card">
-        
-        <!-- Koniec Karty lekarza -->
-      </div>
-    </div>
-  </div>
+    <main class="content">
+      <section class="doctor_cards">
+        <div id="Pediatra_card">
+          <!-- Początek Panelu wyboru lekarza-->
+
+          <!-- Koniec Karty lekarza -->
+        </div>
+        <div id="Rodzinny_card">
+          <!-- Koniec Karty lekarza -->
+        </div>
+      </section>
+    </main>
 
     <!--footer section-->
 
-    <div class="footer">
+    <footer class="footer">
       <div class="share">
-        <a href="https://www.facebook.com/CentrumMedycznePolmed/" class="btn"> <i class="fab fa-facebook"></i> facebook </a>
-        <a href="https://www.youtube.com/c/CentrumMedycznePOLMED" class="btn"> <i class="fab fa-youtube"></i> youtube </a>
-        <a href="https://www.instagram.com/polmedcentrummedyczne/" class="btn"> <i class="fab fa-instagram"></i> instagram </a>
-        <a href="https://www.linkedin.com/company/polmed-s.a./?originalSubdomain=pl" class="btn"> <i class="fab fa-linkedin"></i> linkedin </a>
-        <a href="https://www.nfz.gov.pl/" class="btn"> <img src="img/nfz_logo_C_kolor.png"> </a>
+        <a href="https://www.facebook.com/CentrumMedycznePolmed/" class="btn">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.youtube.com/c/CentrumMedycznePOLMED" class="btn">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.instagram.com/polmedcentrummedyczne/" class="btn">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/company/polmed-s.a./?originalSubdomain=pl"
+          class="btn"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.nfz.gov.pl/" class="btn">
+          <img src="img/nfz_logo_C_kolor.png" />
+        </a>
       </div>
-    </div>
+    </footer>
 
     <!--footer section end-->
   </body>

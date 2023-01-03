@@ -1,0 +1,443 @@
+<!-- Początek kalendarza
+<div class="week" id="week1">
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Dziś</p>
+      <p class="day_data">04.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Jutro</p>
+      <p class="day_data">05.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Ndz,</p>
+      <p class="day_data">06.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Pon,</p>
+      <p class="day_data">07.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Wt,</p>
+      <p class="day_data">08.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="week" id="week2">
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Dziś</p>
+      <p class="day_data">04.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Jutro</p>
+      <p class="day_data">05.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Ndz,</p>
+      <p class="day_data">06.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Pon,</p>
+      <p class="day_data">07.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Wt,</p>
+      <p class="day_data">08.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+</div><div class="week" id="week3">
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Dziś</p>
+      <p class="day_data">04.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Jutro</p>
+      <p class="day_data">05.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Ndz,</p>
+      <p class="day_data">06.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Pon,</p>
+      <p class="day_data">07.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day">
+      <p class="day_name">Wt,</p>
+      <p class="day_data">08.11</p>
+    </div>
+    <div class="houers">
+      <button class="term_booked">09:00</button>
+      <button class="term_free">09:20</button>
+      <button class="term_free">09:40</button>
+      <button class="term_free">10:00</button>
+      <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      <div class="more" hidden>
+        
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_booked">09:00</button>
+        <button class="term_free">09:20</button>
+        <button class="term_booked">09:40</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+        <button class="term_free">10:00</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="more_term"><button>Więcej terminów</button></div> -->
+<!-- Koniec kalendarza -->

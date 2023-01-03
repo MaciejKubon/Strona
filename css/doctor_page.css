@@ -117,26 +117,36 @@
   border-radius: 10px;
   border: 1px solid lightgrey;
   padding: 2rem 5%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .doctor_address {
-  width: 90%;
+  width: 50%;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 1rem;
   color: #130f40;
+  margin-bottom: 10px;
 }
 
 .doctor_number {
-  width: 90%;
+  width: 50%;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 1rem;
   color: #130f40;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.doctor_info h3
+{
+  font-size: 1.5rem;
 }
 .doctor_description {
   background-color: rgb(255, 255, 255, 0.6);
   width: 100%;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 1.5rem;
   color: #130f40;
+  padding: 3px 3px;
 
   min-height: 125px;
   border-radius: 5px;
@@ -213,10 +223,15 @@
 .calendar {
   width: 75%;
 }
-.next_5_days {
+.week {
   margin: 10px 0px;
-  display: flex;
+  display: none;
   width: 100%;
+  opacity: 0;
+}
+#week1{
+  display: flex;
+  opacity: 1;
 }
 .days {
   width: 20%;
@@ -243,30 +258,40 @@
 .term_booked {
   background-color: rgba(0, 0, 0, 0);
   text-decoration: line-through;
-  color: rgb(120, 120, 120);
+  color: #666;
 }
 .term_free {
-  background-color: lightcyan;
+  background-color: #def3fa;
   border-radius: 5px;
-  color: lightseagreen;
+  color: #130f40;
 }
 .term_free:hover {
   cursor: pointer;
+  color: #0091FF;
 }
 .empty_term {
   background-color: rgba(0, 0, 0, 0);
-  color: rgb(120, 120, 120);
+  color: #787878;
 }
+
 .more_term {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .more_term button {
-  height: 30px;
-  width: 40%;
+  height: 40px;
+  width: 60%;
   border-radius: 15px;
   border: 0px;
   background-color: lightcyan;
+}
+.more_term button:hover {
+  cursor: pointer;
+  color: #0091FF;
 }
 @media only screen and (max-width: 1024px) {
 .content{
