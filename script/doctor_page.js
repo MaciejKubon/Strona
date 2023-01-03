@@ -53,7 +53,7 @@ function creat_calender(id, number_week) {
       day_calender=id_calender[day_data[i+number_day]];
       tekst = tekst + '<div class="days"><div class="day"><p class="day_name">'+day_name[i+number_day]+'</p><p class="day_data">'+day_data[i+number_day]+'</p></div>';
       tekst = tekst + '<div class="houers">'
-      tekst = tekst + '<div class="constantly_visible'
+      tekst = tekst + '<div class="constantly_visible">';
       for(let j=0; j<6; j++)
       {
         godzina = day_calender[j];

@@ -344,8 +344,15 @@
   .calender {
     width: 90%;
   }
+  .days p{
+    font-size: 0.8em;
+  }
+  .houers button{
+    font-size: 0.8em;
+  }
   .more_term button
   {
     width: 80%;
+    
   }
 }

@@ -1,8 +1,8 @@
 // import data from '../data/data_doctor.json' assert { type: 'json' };
 // import calender from '../data/data_calender.json' assert {type: 'json'};
 
-const data = await fetch("../data/data_doctor.json").then((data) => data.json());
-const calender = await fetch("../data/data_calender.json").then((data) => data.json());
+const data = await fetch("data/data_doctor.json").then((data) => data.json());
+const calender = await fetch("data/data_calender.json").then((data) => data.json());
 // const responseData = await fetch('../data/data_doctor.json');
 // const data = await JSON.parse(responseData);
 // const responseCalender = await fetch('../data/data_doctor.json');
