@@ -170,7 +170,7 @@ html::-webkit-scrollbar-thumb {
     font-size: 80%;
   }
   .header {
-    padding: 2rem;
+    padding: 2em 10%;
   }
   .btn
   {
@@ -203,6 +203,7 @@ html::-webkit-scrollbar-thumb {
   {
     width: 80%;
     text-align: center;
+    font-size: 1.5em;
   }
 
 }

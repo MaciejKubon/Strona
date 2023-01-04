@@ -136,8 +136,7 @@
   text-align: right;
   margin-bottom: 10px;
 }
-.doctor_info h3
-{
+.doctor_info h3 {
   font-size: 1.5rem;
 }
 .doctor_description {
@@ -178,18 +177,17 @@
 }
 .price {
   text-align: right;
-
   color: #130f40;
   width: 50%;
   font-weight: 100;
 }
 .price h5 {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 400;
 }
 .appointment_bottom h3 {
   margin-top: 10px;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 400;
 }
 .calendar_app {
@@ -197,6 +195,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#right_first {
+  display: none;
+}
+#right_second {
+  display: flex;
 }
 .left_arrow,
 .right_arrow {
@@ -229,7 +233,7 @@
   width: 100%;
   opacity: 0;
 }
-#week1{
+#week1 {
   display: flex;
   opacity: 1;
 }
@@ -267,7 +271,7 @@
 }
 .term_free:hover {
   cursor: pointer;
-  color: #0091FF;
+  color: #0091ff;
 }
 .empty_term {
   background-color: rgba(0, 0, 0, 0);
@@ -279,8 +283,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .more_term button {
   height: 40px;
@@ -291,10 +295,74 @@
 }
 .more_term button:hover {
   cursor: pointer;
-  color: #0091FF;
+  color: #0091ff;
+}
+
+/* OKIENKO */
+#window_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10000;
+}
+
+#window_overlay.opened {
+  opacity: 1;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
+  visibility: visible;
+}
+
+.window_content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%) scale(0, 0);
+  -webkit-transform: translate(-50%, -50%) scale(0, 0);
+  transform: translate(-50%, -50%) scale(0, 0);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+  visibility: hidden;
+  z-index: 10001;
+}
+
+.window_content.opened {
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms;
+  -ms-transform: translate(-50%, -50%) scale(1, 1);
+  -webkit-transform: translate(-50%, -50%) scale(1, 1);
+  transform: translate(-50%, -50%) scale(1, 1);
+  visibility: visible;
+  padding: 40px 5%;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.window_content .window_close {
+  margin-left: -50px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ec3f22;
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.window_content .window_close:hover {
+  text-decoration: none;
+  background-color: #ec6922;
 }
 @media only screen and (max-width: 1024px) {
-.content{
+  .content {
     flex-wrap: wrap;
   }
   .left_side {
@@ -312,6 +380,24 @@
   .doctor_photo {
     width: 40%;
     max-width: 300px;
+  }
+  .doctor_info h3 {
+    font-size: 1.2em;
+  }
+
+  .doctor_info h2 {
+    font-size: 1.2em;
+  }
+  .doctor_info p {
+    font-size: 0.8em;
+  }
+  .window_content {
+    margin-top: 5%;
+    width: 80%;
+    height: 50vh;
+  }
+  .window_content h2 {
+    height: 80%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -341,18 +427,93 @@
     width: 100%;
     border-left: 0px solid gray;
   }
-  .calender {
-    width: 90%;
+  .doctor_info h3 {
+    font-size: 1.2em;
   }
-  .days p{
+
+  .doctor_info h2 {
+    font-size: 1.2em;
+  }
+  .doctor_info p {
     font-size: 0.8em;
   }
-  .houers button{
-    font-size: 0.8em;
-  }
-  .more_term button
+  .appointment_top
   {
+    flex-wrap: wrap;
+  }
+  .visit_reason, .list_of_reasons,.price
+  {
+    width: 100%;
+    margin-top: 5px;
+    text-align: left;
+  }
+  .price h5,.visit_reason, .appointment_bottom h3 {
+    font-size: 1.2em;
+  }
+  .visit_reason select
+  {
+    margin-top: 5px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #right_first {
+    display: flex;
+  }
+  .calendar_app {
+    flex-wrap: wrap;
+  }
+  #right_second {
+    display: none;
+  }
+  .left_arrow,
+  .right_arrow {
+    width: 45%;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .calendar {
+    width: 100%;
+  }
+  .left_arrow button,
+  .right_arrow button {
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: lightcyan;
+  }
+  .days p {
+    font-size: 0.8em;
+  }
+  .houers button {
+    font-size: 0.8em;
+  }
+  .more_term button {
     width: 80%;
-    
+  }
+  .window_content {
+    margin-top: 5%;
+    width: 100%;
+    height: 80vh;
+  }
+
+  .window_content h2 {
+    height: 60%;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  .window_content .window_close {
+    padding: 10px auto;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ec3f22;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
   }
 }

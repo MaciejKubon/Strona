@@ -51,17 +51,18 @@ function creat_calender(id, number_week) {
     for(let i =0; i<5; i++)
     {
       day_calender=id_calender[day_data[i+number_day]];
-      tekst = tekst + '<div class="days"><div class="day"><p class="day_name">'+day_name[i+number_day]+'</p><p class="day_data">'+day_data[i+number_day]+'</p></div>';
+      let dayData = day_data[i+number_day].split(".", 2);
+      tekst = tekst + '<div class="days"><div class="day"><p class="day_name">'+day_name[i+number_day]+'</p><p class="day_data">'+dayData[0]+'.'+dayData[1]+'</p></div>';
       tekst = tekst + '<div class="houers">'
       tekst = tekst + '<div class="constantly_visible">';
       for(let j=0; j<6; j++)
       {
         godzina = day_calender[j];
         if (godzina == "-")
-          tekst = tekst + '<button class="empty_term">-</button>';
+          tekst = tekst + '<button class="empty_term" >-</button>';
         else if (godzina.length > 5)
           tekst = tekst + '<button class="term_booked">' + godzina.slice(0, -1) + "</button>";
-        else tekst = tekst + '<button class="term_free">' + godzina + "</button>";
+        else tekst = tekst + '<button class="term_free" id="'+day_data[i+number_day]+'T'+godzina+'">' + godzina + "</button>";
       }
       tekst = tekst + '</div><div class="more" hidden>'
       for(let j=6; j<day_calender.length; j++)
@@ -71,7 +72,7 @@ function creat_calender(id, number_week) {
           tekst = tekst + '<button class="empty_term">-</button>';
         else if (godzina.length > 5)
           tekst = tekst + '<button class="term_booked">' + godzina.slice(0, -1) + "</button>";
-        else tekst = tekst + '<button class="term_free">' + godzina + "</button>";
+        else tekst = tekst + '<button class="term_free" id="'+day_data[i+number_day]+'T'+godzina+'">' + godzina + "</button>";
       }
       tekst = tekst + '</div>'
       tekst = tekst + '</div>'
@@ -94,11 +95,21 @@ function NumberMonth(NumMonth)
   return tekst;
 }
 
+function brak_wizyty()
+{
+  $('.window_content').addClass('opened');
+  $('#window_overlay').addClass('opened');
+  $('#purpose_of_visit').css("background-color", "#f75442");
+}
+
 $(document).ready(function () {
   let adres = location.href;
-  let id = adres.split("?")[1];
-  id = "zaq1";
-  //id = id.split("=")[1];
+  let id = "";
+  if(adres.indexOf("?") != -1)
+    id = (adres.split("?")[1]).split("=")[1];
+  else
+    id ="zaq1";
+  
   let dane = data.id[id];
 
   // DOCTOR DATA
@@ -126,15 +137,15 @@ $(document).ready(function () {
     let dzien = new Date(time);
 
     if (dzien.getDay() != 0 && dzien.getDay() != 6) {
-      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1)+ "." + dzien.getFullYear());
       time = time + doba;
     } else if (dzien.getDay() == 0) {
       dzien = new Date(time + doba);
-      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1)+ "." + dzien.getFullYear());
       time = time + 2 * doba;
     } else {
       dzien = new Date(time + 2 * doba);
-      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1)+ "." + dzien.getFullYear());
       time = time + 3 * doba;
     }
     if (i == 0) {
@@ -160,7 +171,12 @@ $(document).ready(function () {
     let rodzaj_wizyty = $("select#purpose_of_visit option:checked").val();
     let cena = "-";
     if (rodzaj_wizyty == "-") cena = "-";
-    else cena = dane["price_of_visit"][rodzaj_wizyty.replace("_", " ")] + " zł";
+    else 
+    {
+      $('#purpose_of_visit').css("background-color", "#ffffff");
+      cena = dane["price_of_visit"][rodzaj_wizyty.replace("_", " ")] + " zł";
+    }
+    
     $(".price h5:last()").text(cena);
   });
   
@@ -173,8 +189,17 @@ $(document).ready(function () {
   // PRZEJŚCIE NA STORNE POTWIEDZAJĄCĄ UMÓWIENIE WIZYTY
   let url = "confirmed_page.html";
   $(".houers button").click(function () {
-    console.log($(this).val);
-    //$(location).attr("href", url);
+    let visitTime = $(this).attr("id");
+    let rodzaj_wizyty = $("select#purpose_of_visit option:checked").val();
+    if(rodzaj_wizyty == "-")
+    {
+      brak_wizyty();
+    }
+    else
+    {
+      url = url + "?"+id+"#"+visitTime+"#"+rodzaj_wizyty;
+      $(location).attr("href", url);
+    }
   });
 
   // Zmiana kalendarza
@@ -247,6 +272,9 @@ $(document).ready(function () {
     $(".right_arrow button").css("cursor", "default");
   });
 
-
+  $('.window_close').click(function (){
+    $('.window_content').removeClass('opened');
+    $('#window_overlay').removeClass('opened');
+  })
   
 });

@@ -34,8 +34,7 @@
     <main class="content">
       <div class="left_side">
         <div class="doctor_card">
-          <!-- Początek karty poszczególnego lekarza-->
-
+          <!-- Początek kartylekarza-->
           <div class="doctor_photo"><img src="" alt="" /></div>
           <div class="doctor_data">
             <div class="doctor_name">
@@ -52,11 +51,11 @@
           <!--poczatek info o lekarzu-->
           <div class="doctor_address">
             <h2>Adres:</h2>
-            <h3></h2>
+            <h3></h3>
           </div>
           <div class="doctor_number">
             <h2>Numer telefonu:</h2>
-            <h3></h2>
+            <h3></h3>
           </div>
           <div class="doctor_description">
             <p></p>
@@ -72,7 +71,7 @@
                 <option value="-">-</option>
               </select>
             </div>
-            <div class="List_of_reasons"></div>
+            <div class="list_of_reasons"></div>
             <div class="price">
               <h5>Cena wizyty:</h5>
               <h5>-</h5>
@@ -82,16 +81,21 @@
             <h3>Data wizyty</h3>
             <div class="calendar_app">
               <div class="left_arrow"><button>&lt</button></div>
+              <div class="right_arrow" id="right_first"><button>&gt</button></div>
               <div class="calendar">
                 
               </div>
-              <div class="right_arrow"><button>&gt</button></div>
+              <div class="right_arrow" id="right_second"><button>&gt</button></div>
             </div>
           </div>
         </div>
       </div>
     </main>
-  
+    <section id="window_overlay"></div>
+      <div id="window_entrance" class="window_content">
+        <h2>Nie wybrano rodzaju wizyty</h2>
+        <button class="window_close">ok</button>
+    </section>
 
     <!--footer section-->
 

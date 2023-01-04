@@ -33,15 +33,15 @@ for (let i=0; i<5; i++)
     let dzien = new Date(time);
     
     if (dzien.getDay() != 0 && dzien.getDay() != 6) {
-      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1)+ "." + dzien.getFullYear());
       time = time + doba;
     } else if (dzien.getDay() == 0) {
       dzien = new Date(time + doba);
-      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1)+ "." + dzien.getFullYear());
       time = time + 2 * doba;
     } else {
       dzien = new Date(time + 2 * doba);
-      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1));
+      day_data[i] = dzien.getDate() + "." + (NumberMonth(Number(dzien.getMonth()) + 1)+ "." + dzien.getFullYear());
       time = time + 3 * doba;
     }
     if(i==0)
@@ -91,7 +91,8 @@ function creat_5_day_calender(id)
   for(let i=0; i<5; i++)
   {
     day_calender = id_calender[day_data[i]]
-    tekst = tekst + '<div class="days"><div class="day"><p class="day_name">'+day_name[i]+'</p><p class="day_data">'+day_data[i]+'</p></div>';
+    let dayData = day_data[i].split(".", 2);
+    tekst = tekst + '<div class="days"><div class="day"><p class="day_name">'+day_name[i]+'</p><p class="day_data">'+dayData[0]+'.'+dayData[1]+'</p></div>';
     tekst = tekst + '<div class="hours">';
     
     for(let i=0; i<4; i++)
