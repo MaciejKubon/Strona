@@ -182,8 +182,22 @@ $(document).ready(function () {
   
 
   // ROZWIJANIE/ZWIJANIE KALENDARZA
+  let rozwiniecie = false
   $(".more_term button").click(function () {
     $(".more").slideToggle(500);
+    $(this).empty();
+    if(rozwiniecie == false)
+    {
+      $(this).append("Mniej terminów");
+      rozwiniecie = true;
+    }
+    else
+    {
+      $(this).append("Więcej terminów");
+      rozwiniecie = false;
+    }
+     
+   
   });
 
   // PRZEJŚCIE NA STORNE POTWIEDZAJĄCĄ UMÓWIENIE WIZYTY
@@ -204,9 +218,11 @@ $(document).ready(function () {
 
   // Zmiana kalendarza
   let number_of_week = 1;
+  let arrowClick = false;
   $(".left_arrow button").css("opacity", "0.3");
   $(".right_arrow button").click(function () {
-    if (number_of_week != $(".week").length){
+    if (number_of_week != $(".week").length && arrowClick==false){
+    arrowClick = true;
     $("#week" + number_of_week).animate(
       {
         opacity: 0,
@@ -226,13 +242,17 @@ $(document).ready(function () {
         if (number_of_week == $(".week").length) {
           $(".right_arrow button").css("opacity", "0.3");
           $(".right_arrow button").css("cursor", "default");
+          
         }
+        arrowClick = false;
       }
     );
+    
   }
   });
   $(".left_arrow button").click(function () {
-    if (number_of_week != 1) {
+    if (number_of_week != 1 && arrowClick==false) {
+      arrowClick = true
       $("#week" + number_of_week).animate(
         {
           opacity: 0,
@@ -253,6 +273,7 @@ $(document).ready(function () {
             $(".left_arrow button").css("opacity", "0.3");
             $(".left_arrow button").css("cursor", "default");
           }
+          arrowClick = false;
         }
       );
     }

@@ -328,6 +328,7 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
   visibility: hidden;
   z-index: 10001;
+  height: 150px;
 }
 
 .window_content.opened {
@@ -338,13 +339,14 @@
   transform: translate(-50%, -50%) scale(1, 1);
   visibility: visible;
   padding: 40px 5%;
-  font-size: 18px;
+  font-size: 1.5em;
   font-weight: 400;
   text-align: center;
   background-color: #ffffff;
 }
 
 .window_content .window_close {
+  margin-top: 20px;
   margin-left: -50px;
   width: 100px;
   height: 30px;
@@ -354,7 +356,7 @@
   position: absolute;
   text-align: center;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 .window_content .window_close:hover {
@@ -394,10 +396,15 @@
   .window_content {
     margin-top: 5%;
     width: 80%;
-    height: 50vh;
+    height: 30vh;
   }
   .window_content h2 {
-    height: 80%;
+    height: 70%;
+    font-size: 1.2em;
+  }
+  .window_content .window_close
+  {
+    font-size: 1.2em;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -485,10 +492,10 @@
     background-color: lightcyan;
   }
   .days p {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .houers button {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .more_term button {
     width: 80%;
@@ -496,24 +503,25 @@
   .window_content {
     margin-top: 5%;
     width: 100%;
-    height: 80vh;
+    height: 30vh;
   }
 
   .window_content h2 {
-    height: 60%;
-    font-size: 2.5em;
+    margin-top: 5%;
+    height: 10%;
+    font-size: 1em;
     margin-bottom: 40px;
   }
   .window_content .window_close {
     padding: 10px auto;
-    margin-left: -100px;
-    width: 200px;
-    height: 50px;
+    margin-left: -75px;
+    width: 150px;
+    height: 30px;
     border-radius: 10px;
     background-color: #ec3f22;
     color: #ffffff;
     text-align: center;
-    line-height: 30px;
-    font-size: 20px;
+    line-height: 1.5em;
+    font-size: 1em;
   }
 }
