@@ -12,7 +12,7 @@ const calender = await fetch("data/data_calender.json").then((data) => data.json
 
 function NumberMonth(NumMonth)
 {
-  let tekst =''
+  let tekst ='';
   if(NumMonth<10)
     tekst = '0'+NumMonth;
   else
@@ -116,7 +116,7 @@ function creat_5_day_calender(id)
 function creat_doctor_card(id, type, name, img, rating, number_of_ratings)
 {
 
-  let tekst = '<div class="doctor_card" ><div class="doctor_photo"><img src="img/'+img+'" alt="zjecie" /></div><div class="doctor_data"><div class="doctor_name"><h2>'+name+'</h2>'+
+  let tekst = '<div class="doctor_card" ><div class="doctor_photo"><img src="img/'+img+'" alt="zjecie" /></div><div class="doctor_data"><div class="doctor_name"><h2 id="'+id+'">'+name+'</h2>'+
   '</div>  <div class="doctor_specialty"><h3>' + type + '</h3></div>'+ creat_doctor_rating(rating, number_of_ratings)+ creat_5_day_calender(id)+'</div></div>';
   $("#"+type+"_card").append(tekst);
 }
@@ -134,6 +134,10 @@ $(".calender button").click(function(){
   $(location).attr("href", url);
 });
 
+$(".doctor_name h2").click(function(){
+  url =url + "?id="+$(this).attr('id');
+  $(location).attr("href", url);
+});
 
 
 

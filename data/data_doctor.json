@@ -6,82 +6,82 @@
         {
             "type" : "Pediatra",
             "name" : "Alicja Woźniak",
-            "img" : "zdj.jpeg",
+            "img" : "/zdj/1.png",
             "rating" : 4,
             "number_of_ratings": 53,
             "addres" : "Lwowska 197, Tarnów",
-            "phone_number" : "123456789",
+            "phone_number" : "421499248",
             "type_of_visit": ["wizyta kontrolna", "konsultacja", "choroba", "wypisanie recepty", "szczepienie"],
             "price_of_visit":
             {
-                "wizyta kontrolna": 80, 
-                "konsultacja": 100, 
-                "choroba": 140, 
-                "wypisanie recepty": 50, 
-                "szczepienie": 200
+                "wizyta kontrolna": 180, 
+                "konsultacja": 200, 
+                "choroba": 240, 
+                "wypisanie recepty": 80, 
+                "szczepienie": 210
             },
-            "doctor_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "doctor_description" : "lek. Alicja Woźniak jest absolwentką Collegium Medicum Uniwersytetu Mikołaja Kopernika. Ma za sobą wiele lat poświęconych na pomoc ludziom i zwalczanie chorób."
 
         },
         "xsw2":
         {
             "type" : "Pediatra",
             "name" : "Kamil Kołodziej",
-            "img" : "zdj.jpeg",
+            "img" : "/zdj/4.png",
             "rating" : 3,
             "number_of_ratings": 13,
             "addres" : "Lwowska 197, Tarnów",
-            "phone_number" : "123456789",
+            "phone_number" : "592377422",
             "type_of_visit": ["wizyta kontrolna", "konsultacja", "choroba", "wypisanie recepty", "szczepienie"],
             "price_of_visit":
             {
-                "wizyta kontrolna": 80, 
-                "konsultacja": 100, 
-                "choroba": 140, 
+                "wizyta kontrolna": 110, 
+                "konsultacja": 180, 
+                "choroba": 200, 
                 "wypisanie recepty": 50, 
-                "szczepienie": 200
+                "szczepienie": 170
             },
-            "doctor_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "doctor_description" : "lek. Kamil Kołodziej jest absolwentem Uniwerytetu Medycznego im. Karola Marcinkowskiego w Poznaniu. Pracował również w Pierwszym Oddziale Pediatrycznym Szpitala im.Żeromskiego w Krakowie -Nowej Hucie zajmując się leczeniem dzieci na oddziale niemowlęcym i dzieci starszych."
         },
         "cde3" : 
         {
             "type" : "Rodzinny",
             "name" : "Emilia Kwiatkowska",
-            "img" : "zdj.jpeg",
+            "img" : "/zdj/2.png",
             "rating" : 4,
             "number_of_ratings": 63,
             "addres" : "Lwowska 197, Tarnów",
-            "phone_number" : "123456789",
+            "phone_number" : "643982018",
             "type_of_visit": ["wizyta kontrolna", "konsultacja", "choroba", "wypisanie recepty", "szczepienie"],
             "price_of_visit":
             {
-                "wizyta kontrolna": 80, 
-                "konsultacja": 100, 
-                "choroba": 140, 
-                "wypisanie recepty": 50, 
-                "szczepienie": 200
+                "wizyta kontrolna": 220, 
+                "konsultacja": 250, 
+                "choroba": 270, 
+                "wypisanie recepty": 100, 
+                "szczepienie": 240
             },
-            "doctor_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "doctor_description" : "lek. Emimlia Kwiatkowska jest absolwentem Uniwersyteyu Medycznego im. Piastów Śląskich we Wrocławiu. Posiada doświadczenie zarówno w lecznictwie szpitalnym jak i ambulatoryjnym - podstawowej opiece zdrowotnej, poradni specjalistycznej. Specjalizację z medycyny rodzinnej ukończył w Szpitalu Uniwersyteckim w Krakowie."
         },
         "vfr4":
         {
             "type" : "Rodzinny",
             "name" : "Dariusz Kaczmarczyk",
-            "img" : "zdj.jpeg",
+            "img" : "/zdj/3.jpg",
             "rating" : 2,
             "number_of_ratings": 23,
             "addres" : "Lwowska 197, Tarnów",
-            "phone_number" : "123456789",
+            "phone_number" : "843256583",
             "type_of_visit": ["wizyta kontrolna", "konsultacja", "choroba", "wypisanie recepty", "szczepienie"],
             "price_of_visit":
             {
                 "wizyta kontrolna": 80, 
-                "konsultacja": 100, 
-                "choroba": 140, 
+                "konsultacja": 150, 
+                "choroba": 180, 
                 "wypisanie recepty": 50, 
                 "szczepienie": 200
             },
-            "doctor_description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "doctor_description" : "lek. Dariusz Kaczmarczyk ukończył kierunek lekarski Collegium Medicum Uniwersytetu Jagiellońskiego w Krakowie. Specjalizację z medycyny rodzinnej ukończył w Szpitalu Uniwersyteckim w Krakowie. W trakcie swojej drogi zawodowej miał okazję pracować w wielu różnych placówkach opieki zdrowotnej - dyżury w szpitalu powiatowym oraz w pomocy doraźnej"
 
         }
     }
