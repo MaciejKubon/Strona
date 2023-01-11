@@ -1,17 +1,10 @@
-//import data from '../data/data_doctor.json' assert { type: 'json' };
 const data = await fetch("../data/data_doctor.json").then((data) =>
   data.json()
 );
 const calender = await fetch("../data/data_calender.json").then((data) =>
   data.json()
 );
-// const response = await fetch('../data/data_doctor.json');
-// const data = await response.json();
 
-// const data = await import('../data/data_doctor.json', {
-//   assert: { type: 'json' }
-// });
-// console.log(JSON.parse(data));
 let today_data = new Date();
 const doba = 86400000;
 let day_name = [];
