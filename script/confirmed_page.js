@@ -19,7 +19,7 @@ $(document).ready(function () {
     $(".doctor_name").append(dane["name"]);
     $(".doctor_addres").append(dane["addres"]);
     $(".type_of_visit").append(typeOfVisit+": " + priceOfVisit + "zł");
-    $(".visit_time").append(visitTime[1]+ " "+ visitTime[0]);
+    $(".visit_time").append(visitTime[1]+ "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ visitTime[0]);
 
 
 
