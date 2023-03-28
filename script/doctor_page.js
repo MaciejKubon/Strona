@@ -50,6 +50,7 @@ function creat_calender(id, number_week) {
       tekst = tekst + '<div class="constantly_visible">';
       for(let j=0; j<6; j++)
       {
+        console.log(day_calender[j]);
         godzina = day_calender[j];
         if (godzina == "-")
           tekst = tekst + '<button class="empty_term" >-</button>';
